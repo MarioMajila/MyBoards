@@ -1,6 +1,22 @@
 // Initialisation des modules 
-const electron = require('electron')
-const app = electron.app
-const BrowserWindow = electron.BrowserView
+const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const url = require('url')
+
+let win;
+
+function createWindow(){
+    win = new BrowserWindow({
+        width: 700,
+        height: 700,
+        transparent: true
+    })
+}
+
+app.on("ready", createWindow);
+
+app.on("window-all-closed", () => {
+    if(process.platform != "darwin"){
+        app.quit();
+    }
+})
