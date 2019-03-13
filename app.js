@@ -11,6 +11,8 @@ function createWindow(){
         height: 700,
         transparent: true
     })
+
+    win.loadURL('http://localhost:8050');
 }
 
 app.on("ready", createWindow);
