@@ -1,11 +1,17 @@
 let express = require('express')
 let logger = require('morgan')
-
+let path = require('path')
 
 let app = express();
 
+app.use(logger('dev'));
+
+app.set('view engine', 'ejs');
+app.use(express.static('views'));
+app.set('views', path.join(__dirname, '/views'));
+
 app.get('/', (request, response) => {
-    response.send("<h1>My first Express App</h1>");
+    response.render('home.ejs');
 })
 
 let port = process.env.PORT || 8050
