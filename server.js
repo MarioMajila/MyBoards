@@ -8,7 +8,8 @@ app.use(logger('dev'));
 
 app.set('view engine', 'ejs');
 app.use(express.static('views'));
-app.set('views', path.join(__dirname, '/views'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname, '/public/views'));
 
 app.get('/', (request, response) => {
     response.render('home.ejs');
