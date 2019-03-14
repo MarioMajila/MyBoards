@@ -9,7 +9,7 @@ function createWindow(){
     win = new BrowserWindow({
         width: 700,
         height: 700,
-        transparent: true
+        frame: false
     })
 
     win.loadURL('http://localhost:8050');
