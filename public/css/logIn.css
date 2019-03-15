@@ -1,4 +1,38 @@
+.formulaire{
+    margin-top: 20%;
+}
+
 .card {
+    margin: 0;
+    padding: 0;
+}
+
+.card .form-header{
+    padding: 20px;
     background-color: #222222;
+    color: white;
+}
+
+.card .btn{
+    background-color: #222222;
+    color: white;
+}
+
+.card .btn:hover{
+    background-color: white;
+    color: #333333;
+    font-weight: bold;
+    border: 1.5px solid #333333;
+}
+
+.card .btn:focus{
+    background-color: white;
+    color: #333333;
+    border: 1.5px solid #333333;
+}
+
+.card .form-control{
+    margin-top: 5%;
+    margin-bottom: 4%;
 }
 
