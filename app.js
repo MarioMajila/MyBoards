@@ -14,7 +14,7 @@ function createWindow(){
 
     win.loadURL('http://localhost:8050');
 
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
 }
 
 app.on("ready", createWindow);
