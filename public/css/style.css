@@ -1,44 +1,43 @@
 #container{
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #333333;
-  }
-  
-  #container nav{
-    display: block;
-    width: 100%;
-    height: 30px;
-    background-color: #333333;
-    -webkit-app-region: drag;
-  }
-  
-  #container nav #buttons{
-    float: right;
-    width: 100px;
-    height: 100%;
-    line-height: 30px;
-    background-color: #222222;
-    cursor: pointer;
-    -webkit-app-region: no-drag;
-  }
-  
-  #buttons #minimize, #buttons #close{
-    float: left;
-    height: 100%;
-    width: 50%;
-    text-align: center;
-    color: #f7f7f7;
-    transition: all ease-in-out .3s;
-  }
-  
-  #buttons #minimize:hover{
-    background-color: #333333;
-  }
-  
-  #buttons #close:hover{
-    background-color: #FF0000;
-  }
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#container nav{
+  display: block;
+  width: 100%;
+  height: 30px;
+  background-color: #333333;
+  -webkit-app-region: drag;
+}
+
+#container nav #buttons{
+  float: right;
+  width: 100px;
+  height: 100%;
+  line-height: 30px;
+  background-color: #222222;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+#buttons #minimize, #buttons #close{
+  float: left;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  color: #f7f7f7;
+  transition: all ease-in-out .3s;
+}
+
+#buttons #minimize:hover{
+  background-color: #333333;
+}
+
+#buttons #close:hover{
+  background-color: #FF0000;
+}
