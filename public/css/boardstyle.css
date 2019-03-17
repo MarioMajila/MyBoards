@@ -1,0 +1,11 @@
+.board-register .banniere{
+    display: block;
+    width: 100%;
+    height: 20%;
+    max-height: 20%;
+  }
+  
+  .board-register .banniere img{
+    width: 100%;
+    height: 20%;
+  }
