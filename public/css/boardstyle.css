@@ -1,0 +1,39 @@
+.board-register .banniere{
+    display: block;
+    width: 100%;
+    height: 40%;
+    max-width: 100%;
+    max-height: 40%;
+}
+
+.board-register .banniere img{
+    width: 100%;
+    height: 20%;
+}
+
+.container{
+    margin-top: 8%;
+}
+
+.container .md-form{
+    margin-top: 5%;
+}
+
+.container .md-form textarea{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 3%;
+}
+
+.container form .btn{
+    background-color: #222222;
+    color: white;
+}
+
+.container form .btn:hover{
+    background-color: white;
+    color: #222222;
+    font-weight: bold;
+    border: solid #222222;
+    transition: all ease-in-out .3s;
+}

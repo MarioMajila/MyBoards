@@ -15,6 +15,10 @@ app.get('/', (request, response) => {
     response.render('home.ejs');
 })
 
+app.get('/boardRegister', (request, response) => {
+    response.render('boardRegister.ejs');
+})
+
 let port = process.env.PORT || 8050
 
 app.listen(port, () => {

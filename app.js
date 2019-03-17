@@ -9,10 +9,12 @@ function createWindow(){
     win = new BrowserWindow({
         width: 700,
         height: 700,
+        maxWidth: 700,
+        maxHeight: 700,
         frame: false
     })
 
-    win.loadURL('http://localhost:8050');
+    win.loadURL('http://localhost:8050/');
 
     // win.webContents.openDevTools()
 }
