@@ -14,7 +14,7 @@ function createWindow(){
         frame: false
     })
 
-    win.loadURL('http://localhost:8050');
+    win.loadURL('http://localhost:8050/boardRegister');
 
     win.webContents.openDevTools()
 }
