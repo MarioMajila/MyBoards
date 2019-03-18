@@ -4,6 +4,8 @@ const projectType = document.querySelector('#type')
 const description = document.querySelector('#description')
 const btnEnregistrer = document.querySelector('#btnEnregistrer')
 
+const projectCollection = document.querySelector('#projectCollection')
+
 LoadEventListener();
 
 function LoadEventListener(){
