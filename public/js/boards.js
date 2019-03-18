@@ -10,3 +10,9 @@ function LoadEventListener(){
 
     btnEnregistrer.addEventListener('click', addProject);
 }
+
+function addProject(event){
+    console.log('C\'est déjà bon');
+
+    event.preventDefault();
+}
