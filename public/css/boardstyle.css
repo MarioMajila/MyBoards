@@ -4,6 +4,7 @@
     height: 40%;
     max-width: 100%;
     max-height: 40%;
+    transition: all ease-in-out .10s;
 }
 
 .board-register .banniere img{
