@@ -16,3 +16,7 @@ function addProject(event){
 
     event.preventDefault();
 }
+
+function storeProjectInLocalStorage(proj){
+    
+}
