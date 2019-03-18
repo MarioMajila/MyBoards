@@ -18,5 +18,15 @@ function addProject(event){
 }
 
 function storeProjectInLocalStorage(proj){
+    let project;
     
+    if(localStorage.getItem('Projet') === null){
+        project = [];
+    }
+    else{
+        project = JSON.parse(localStorage.getItem('Projet'));
+    }
+
+    project.push(proj);
+    localStorage.setItem('projet', JSON.stringify(project));
 }
