@@ -13,12 +13,33 @@ function LoadEventListener(){
     btnEnregistrer.addEventListener('click', addProject);
 }
 
+// Ajout d'un nouveau projet
 function addProject(event){
-    console.log('C\'est déjà bon');
+    if(projectName.value == ""){
+        alert('Veuillez donner un nom à votre projet');
+    }
+
+    // Création d'un tableau
+    const div = document.createElement('div');
+    div.className = "card col-sm-3 project";
+
+    // Création du nom du project
+    const h2 = document.createElement('h2');
+    h2.className = "project-title";
+    h2.appendChild(document.createTextNode(projectName.value));
+    
+    div.appendChild(h2);
+    alert(div)
+    // alert('Projet ajouté !')
+    storeProjectInLocalStorage(projectName.value);
+
+    projectCollection.appendChild(h2);
+    
 
     event.preventDefault();
 }
 
+//Stokage d'un projet dans le localStorage
 function storeProjectInLocalStorage(proj){
     let project;
     
