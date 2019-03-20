@@ -39,6 +39,8 @@ $(() => {
 
             InsertProjectInLocalStorage(projet);
             alert('Project saved successfully !')
+
+            gutFields();
         }        
 
         event.preventDefault();
