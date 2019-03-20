@@ -2,19 +2,14 @@
 const $ = require('jquery');
 
 $(() => {
-    // Initialisation des variables
-    const projectName = $('#name')
-    const projectType = $('#type')
-    const description = $('#description')
-    const btnEnregistrer = $('#btnEnregistrer')
-
-    const projectCollection = $('#projectCollection')
 
     LoadEventListener();
 
     function LoadEventListener(){
 
-        btnEnregistrer.on('click', addProject);
+        $('#btnEnregistrer').on('click', () => {
+            addProject();
+        });
     }
 
     function initProjectPack(){
@@ -29,7 +24,7 @@ $(() => {
 
     // Ajout d'un nouveau projet
     function addProject(event){
-        if(projectName.value == ""){
+        if($('#name').val() == ""){
             alert('Veuillez donner un nom à votre projet');
         }
         else{
@@ -37,11 +32,14 @@ $(() => {
             let id = projectpack.project.length;
             let projet = {
                 id: id,
-                name: projectName.value,
-                type: projectType.value,
-                desc: description,
+                name: $('#name').val(),
+                type: $('#type').val(),
+                desc: $('#description').val(),
                 state: 0
             }
+
+            InsertProjectInLocalStorage(projet);
+            alert('Project saved successfully !')
         }        
 
         event.preventDefault();
@@ -49,7 +47,7 @@ $(() => {
 
     function InsertProjectInLocalStorage(project){
         let projectPack = initProjectPack();
-        projectPack.project.push(projet);
+        projectPack.project.push(project);
 
         localStorage.setItem('ProjectPack', JSON.stringify(projectPack));
     }
