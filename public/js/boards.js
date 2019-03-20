@@ -21,13 +21,17 @@ $(() => {
         let projectPack = {
             project : []
         }
+
+        if(localStorage.getItem('ProjectPack') === null)
+            localStorage.setItem('ProjectPack', JSON.stringify(projectPack));
+        return JSON.parse(localStorage.getItem('ProjectPack'));
     }
 
     // Ajout d'un nouveau projet
     function addProject(event){
         if(projectName.value == ""){
             alert('Veuillez donner un nom à votre projet');
-        }        
+        }       
 
         event.preventDefault();
     }
