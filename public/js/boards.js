@@ -46,26 +46,12 @@ $(() => {
         event.preventDefault();
     }
 
+    // Insertion d'un projet dans le localStorage
     function InsertProjectInLocalStorage(project){
         let projectPack = initProjectPack();
         projectPack.project.push(project);
 
         localStorage.setItem('ProjectPack', JSON.stringify(projectPack));
-    }
-
-    //Stokage d'un projet dans le localStorage
-    function storeProjectInLocalStorage(proj){
-        let project;
-        
-        if(localStorage.getItem('Projet') === null){
-            project = [];
-        }
-        else{
-            project = JSON.parse(localStorage.getItem('Projet'));
-        }
-
-        project.push(proj);
-        localStorage.setItem('projet', JSON.stringify(project));
     }
 
     function gutFields(){
