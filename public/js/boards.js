@@ -48,7 +48,10 @@ $(() => {
     }
 
     function InsertProjectInLocalStorage(project){
-        
+        let projectPack = initProjectPack();
+        projectPack.project.push(projet);
+
+        localStorage.setItem('ProjectPack', JSON.stringify(projectPack));
     }
 
     //Stokage d'un projet dans le localStorage
