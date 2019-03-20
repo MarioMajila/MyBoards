@@ -67,6 +67,8 @@ $(() => {
     }
 
     function gutFields(){
-        
+        $('#name').val() = "";
+        $('#type').val() = "";
+        $('#descrition').val() = "";
     }
 })
