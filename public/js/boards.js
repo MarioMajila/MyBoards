@@ -1,3 +1,6 @@
+// Initialisation des modules
+const $ = require('jquery');
+
 // Initialisation des variables
 const projectName = document.querySelector('#name')
 const projectType = document.querySelector('#type')
