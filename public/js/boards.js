@@ -35,7 +35,13 @@ $(() => {
         else{
             let projectpack = initProjectPack();
             let id = projectpack.project.length;
-            
+            let projet = {
+                id: id,
+                name: projectName.value,
+                type: projectType.value,
+                desc: description,
+                state: 0
+            }
         }        
 
         event.preventDefault();
