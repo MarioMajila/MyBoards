@@ -17,6 +17,12 @@ $(() => {
         btnEnregistrer.on('click', addProject);
     }
 
+    function initProjectPack(){
+        let projectPack = {
+            project : []
+        }
+    }
+
     // Ajout d'un nouveau projet
     function addProject(event){
         if(projectName.value == ""){
