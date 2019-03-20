@@ -7,11 +7,10 @@ $(() => {
 
     function LoadEventListener(){
 
-        $('#btnEnregistrer').on('click', () => {
-            addProject();
-        });
+        $('#btnEnregistrer').on('click', addProject);
     }
 
+    // Initialisation du paquet de projet
     function initProjectPack(){
         let projectPack = {
             project : []
