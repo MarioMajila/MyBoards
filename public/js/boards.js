@@ -65,4 +65,8 @@ $(() => {
         project.push(proj);
         localStorage.setItem('projet', JSON.stringify(project));
     }
+
+    function gutFields(){
+        
+    }
 })
