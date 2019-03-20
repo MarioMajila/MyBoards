@@ -31,7 +31,12 @@ $(() => {
     function addProject(event){
         if(projectName.value == ""){
             alert('Veuillez donner un nom à votre projet');
-        }       
+        }
+        else{
+            let projectpack = initProjectPack();
+            let id = projectpack.project.length;
+            
+        }        
 
         event.preventDefault();
     }
