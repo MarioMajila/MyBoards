@@ -54,6 +54,10 @@ $(() => {
         localStorage.setItem('ProjectPack', JSON.stringify(projectPack));
     }
 
+    function displayProjects(){
+        
+    }
+
     function gutFields(){
         $('#name').val() = "";
         $('#type').val() = "";
