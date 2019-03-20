@@ -47,6 +47,10 @@ $(() => {
         event.preventDefault();
     }
 
+    function InsertProjectInLocalStorage(project){
+        
+    }
+
     //Stokage d'un projet dans le localStorage
     function storeProjectInLocalStorage(proj){
         let project;
