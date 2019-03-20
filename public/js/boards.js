@@ -1,58 +1,60 @@
 // Initialisation des modules
 const $ = require('jquery');
 
-// Initialisation des variables
-const projectName = document.querySelector('#name')
-const projectType = document.querySelector('#type')
-const description = document.querySelector('#description')
-const btnEnregistrer = document.querySelector('#btnEnregistrer')
+$(() => {
+    // Initialisation des variables
+    const projectName = document.querySelector('#name')
+    const projectType = document.querySelector('#type')
+    const description = document.querySelector('#description')
+    const btnEnregistrer = document.querySelector('#btnEnregistrer')
 
-const projectCollection = document.querySelector('#projectCollection')
+    const projectCollection = document.querySelector('#projectCollection')
 
-LoadEventListener();
+    LoadEventListener();
 
-function LoadEventListener(){
+    function LoadEventListener(){
 
-    btnEnregistrer.addEventListener('click', addProject);
-}
-
-// Ajout d'un nouveau projet
-function addProject(event){
-    if(projectName.value == ""){
-        alert('Veuillez donner un nom à votre projet');
+        btnEnregistrer.addEventListener('click', addProject);
     }
 
-    // Création d'un tableau
-    const div = document.createElement('div');
-    div.className = "card col-sm-3 project";
+    // Ajout d'un nouveau projet
+    function addProject(event){
+        if(projectName.value == ""){
+            alert('Veuillez donner un nom à votre projet');
+        }
 
-    // Création du nom du project
-    const h2 = document.createElement('h2');
-    h2.className = "project-title";
-    h2.appendChild(document.createTextNode(projectName.value));
-    
-    div.appendChild(h2);
-    alert(div)
-    // alert('Projet ajouté !')
-    storeProjectInLocalStorage(projectName.value);
+        // Création d'un tableau
+        const div = document.createElement('div');
+        div.className = "card col-sm-3 project";
 
-    projectCollection.appendChild(h2);
-    
+        // Création du nom du project
+        const h2 = document.createElement('h2');
+        h2.className = "project-title";
+        h2.appendChild(document.createTextNode(projectName.value));
+        
+        div.appendChild(h2);
+        alert(div)
+        // alert('Projet ajouté !')
+        storeProjectInLocalStorage(projectName.value);
 
-    event.preventDefault();
-}
+        projectCollection.appendChild(h2);
+        
 
-//Stokage d'un projet dans le localStorage
-function storeProjectInLocalStorage(proj){
-    let project;
-    
-    if(localStorage.getItem('Projet') === null){
-        project = [];
-    }
-    else{
-        project = JSON.parse(localStorage.getItem('Projet'));
+        event.preventDefault();
     }
 
-    project.push(proj);
-    localStorage.setItem('projet', JSON.stringify(project));
-}
+    //Stokage d'un projet dans le localStorage
+    function storeProjectInLocalStorage(proj){
+        let project;
+        
+        if(localStorage.getItem('Projet') === null){
+            project = [];
+        }
+        else{
+            project = JSON.parse(localStorage.getItem('Projet'));
+        }
+
+        project.push(proj);
+        localStorage.setItem('projet', JSON.stringify(project));
+    }
+})
