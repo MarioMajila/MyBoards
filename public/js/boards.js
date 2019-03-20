@@ -1,8 +1,5 @@
 // Initialisation des modules
 const $ = require('jquery');
-const express = require('express');
-
-const app = express();
 
 $(() => {
 
