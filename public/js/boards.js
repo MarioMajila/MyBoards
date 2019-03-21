@@ -42,7 +42,6 @@ $(() => {
             alert('Project saved successfully !')
 
             gutFields();
-            document.location.href = '/';
         }        
 
         event.preventDefault();
@@ -58,7 +57,7 @@ $(() => {
 
     function displayProjects(){
         let projectpack = initProjectPack();
-        projectpack.project.array.forEach(element => {
+        projectpack.project.forEach(element => {
             document.querySelector('#project-collection').innerHTML += projectRoll(element);
         }, this);
     }
