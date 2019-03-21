@@ -3,6 +3,7 @@ const $ = require('jquery');
 
 $(() => {
 
+    displayProjects();
     LoadEventListener();
 
     function LoadEventListener(){
@@ -41,6 +42,7 @@ $(() => {
             alert('Project saved successfully !')
 
             gutFields();
+            document.location.href = '/';
         }        
 
         event.preventDefault();
@@ -56,13 +58,18 @@ $(() => {
 
     function displayProjects(){
         let projectpack = initProjectPack();
-        projectpack.project.array.forEach((element) => {
-            //TODO
+        projectpack.project.array.forEach(element => {
+            document.querySelector('#project-collection').innerHTML += projectRoll(element);
         }, this);
     }
 
-    function projectRoll(projet){
-        
+    function projectRoll(project){
+        let state = ['En cours', 'En pause', 'Fini']
+
+        let card = `<div class="card col-sm-3">
+                        <span>${project.name}</span>
+                    </div>`;
+        return card;
     }
 
     function gutFields(){
