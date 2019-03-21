@@ -55,7 +55,10 @@ $(() => {
     }
 
     function displayProjects(){
-        
+        let projectpack = initProjectPack();
+        projectpack.project.array.forEach((element) => {
+            //TODO
+        }, this);
     }
 
     function gutFields(){
