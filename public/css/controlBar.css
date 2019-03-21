@@ -13,6 +13,7 @@
     height: 30px;
     background-color: #333333;
     -webkit-app-region: drag;
+    position: fixed;
   }
   
   #container nav #buttons{
