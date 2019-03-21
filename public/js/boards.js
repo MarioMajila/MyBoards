@@ -61,6 +61,10 @@ $(() => {
         }, this);
     }
 
+    function projectRoll(){
+        
+    }
+
     function gutFields(){
         $('#name').val() = "";
         $('#type').val() = "";
